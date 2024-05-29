@@ -70,3 +70,5 @@ for (var i = 0; i < removeProductButtons.length; i++){
   }
   document.querySelector(".cart-total-container span").innerText ="R$" + totalAmount
 }
+
+

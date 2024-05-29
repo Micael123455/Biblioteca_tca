@@ -1,179 +1,295 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/*
+  Variáveis
+*/
+
+:root {
+  --main-color: #407bff;
+  --link-color: #666666;
+  --text1: #999999;
+  --highligth-text: #333333;
+  --input-text: #555555;
+  --white-color: #FFFFFF;
+  --point-list: #CCCCCC;
+  --line-input: #D9D9D9;
+}
+
+/*
+  Fontes
+*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+/*
+  Zerar estilos
+*/
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
 }
 
-body {
-    background: #1B2029;
-    color: white;
-    font-weight: 500;
-    display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
 }
 
-main {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+ul, li {
+	margin: 0px;
+	list-style-type: none;
 }
 
-main h1 {
-    color: #8880FE;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
+input, button {
+	outline: none !important;
+	border: none;
 }
 
-main.social-media {
-    display: flex;
-    align-content: center;
+button:hover {
+	cursor: pointer;
 }
 
-main .social-media a {
-    text-decoration: none;
+/*
+  Utilitários
+*/
+
+.text1 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: var(--text1);
+  line-height: 1.5;
 }
 
-main .social-media img {
-    width: 36px;
-    margin-left: 3rem;
+.text2 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: var(--main-color);
+  line-height: 1.5;
 }
 
-main .social-media a:first-child img {
-    margin-left: 0;
+.margin-bottom-35 {
+  margin-bottom: 35px;
 }
 
-main .alternative {
-    margin-top: 1rem;
+.margin-top-35 {
+  margin-top: 35px;
 }
 
-main .alternative span {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.3);
-    position: relative;
+.margin-bottom-8 {
+  margin-bottom: 8px;
 }
 
-main .alternative span::before, main .alternative span::after {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 100px;
-    bottom: 50%;
-    right: 50px;
-    background: rgba(255, 255, 255, 0.3);
+.margin-top-8 {
+  margin-top: 8px;
 }
 
-main .alternative span::after {
-    left: 50px;
+.margin-left-50 {
+  margin-left: 50px;
 }
 
-main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*
+  Login
+*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
 }
 
-main form label {
-    display: flex;
-    flex-direction: column;
+.container-login {
+  width: 100%;  
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: var(--white-color);  
 }
 
-main form label span {
-    font-size: 1.1rem;
-    margin-top: 2rem;
+.wrap-login {
+  width: 370px;
+  margin-right: 50px;
+  background: var(--white-color);
 }
 
-main form input {
-    background: #161923;
-    width: 300px;
-    height: 50px;
-    padding: 0 0.5rem;
-    margin-top: 1rem;
-    outline: none;
-    color: rgba(166, 166, 166);
-    font-size: 1rem;
-    border: 1px solid #040B18;
-    border-radius: 8px;
+
+.login-form {
+  width: 100%;
 }
 
-main form input[type="submit"] {
-    cursor: pointer;
-    width: 50%;
-    margin-top: 4rem;
-    border: none;
-    border-radius: 32px;
-    background: #29779c;
-    color: white;
-    font-size: 1.1rem;
-    transition: all .3s ease-in-out;
+.login-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: var(--highligth-text);
+  line-height: 1.2;
+  text-align: center;
 }
 
-main form input[type="submit"]:hover {
-    background: #efefef;
+
+.wrap-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid var(--line-input);
 }
 
-section.images {
-    width: 50vw;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 4rem;
+.input-form {
+  font-family: Poppins-SemiBold;
+  font-size: 18px;
+  color: var(--input-text);
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 52px;
+  background: transparent;
+  padding: 0 5px;
 }
 
-section.images img {
-    width: 100%;
+.focus-input-form {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
-section.images .circle {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #E8CBC0, #1b2a52);
-    clip-path: circle(40% at right 80%);
-    z-index: -1;
+.focus-input-form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.4s;
+  background: var(--main-color);
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1200px) {
-    section.images img {
-        width: 110%;
-    }
-
-    section.images .circle {
-        clip-path: circle(35% at right 80%);
-    }
+.focus-input-form::after {
+  font-family: Poppins-Medium;
+  font-size: 18px;
+  color: var(--text1);
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  padding-left: 5px;
+  transition: all 0.4s;
 }
 
-@media only screen and (max-width: 900px) {
-    section.images {
-        display: none;
-        visibility: hidden;
-    }
-
-    main {
-        width: 100vw;
-    }
+.input-form:focus + .focus-input-form::after {
+  top: -20px;
+  font-size: 15px;
 }
 
-@media only screen and (max-width: 450px) {
-    main h1 {
-        font-size: 2rem;
-    }
+.input-form:focus + .focus-input-form::before {
+  width: 100%;
+}
 
-    main .alternative span {
-        font-size: 0.8rem;
-    }
+.has-val.input-form + .focus-input-form::after {
+  top: -20px;
+  font-size: 15px;
+}
 
-    main form label span, main form input[type="submit"] {
-        font-size: 1rem;
-    }
+.has-val.input-form + .focus-input-form::before {
+  width: 100%;
+}
+
+
+.container-login-form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form-btn {
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: var(--white-color);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.login-form-btn:hover  {
+  background-color: var(--highligth-text);
+}
+
+/*
+  Links - Login utils
+*/
+
+a {
+	font-family: Poppins-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: var(--link-color);
+	margin: 0px;
+	transition: all 0.4s;
+}
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+  color: var(--highligth-text);
+}
+
+/*
+  Login utils
+*/
+
+.login-utils {
+  margin-top: 20px;
+}
+
+.login-utils li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.login-utils li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--point-list);
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
 }
